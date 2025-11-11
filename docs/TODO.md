@@ -34,9 +34,9 @@
 - [x] Initialize Node.js projects
   - [x] Backend: `npm init -y`
   - [x] Frontend: `npm create vite@latest`
-- [ ] Setup environment files
-  - [ ] Create `.env.example` for backend
-  - [ ] Create `.env.example` for frontend
+- [x] Setup environment files
+  - [x] Create `.env.example` for backend
+  - [x] Create `.env.example` for frontend
   - [ ] Document all environment variables
 
 ### 1.2 Backend Initial Setup
@@ -77,9 +77,9 @@
 - [x] Setup Tailwind CSS
   - [x] `npx tailwindcss init -p`
   - [x] Configure tailwind.config.js
-- [ ] Install shadcn/ui components
-  - [ ] Setup shadcn/ui CLI
-  - [ ] Install base components (Button, Card, Input, etc)
+- [x] Install shadcn/ui components
+  - [x] Setup shadcn/ui CLI
+  - [x] Install base components (Button, Card, Input, etc)
 - [x] Create folder structure
   ```
   frontend/
