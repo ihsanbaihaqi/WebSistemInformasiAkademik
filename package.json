@@ -6,9 +6,11 @@
     "frontend"
   ],
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky && husky install"
   },
   "devDependencies": {
-    "husky": "^9.0.11"
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^8.0.0"
   }
 }
