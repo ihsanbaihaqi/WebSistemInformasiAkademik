@@ -37,7 +37,7 @@
 - [x] Setup environment files
   - [x] Create `.env.example` for backend
   - [x] Create `.env.example` for frontend
-  - [ ] Document all environment variables
+- [x] Document all environment variables
 
 ### 1.2 Backend Initial Setup
 - [x] Install core dependencies
@@ -47,7 +47,7 @@
   ```
 - [x] Setup TypeScript configuration
   - [x] Create `tsconfig.json`
-  - [ ] Configure paths and build output
+  - [x] Configure paths and build output
 - [x] Setup Prisma
   - [x] `npx prisma init`
   - [ ] Configure PostgreSQL connection
@@ -96,12 +96,12 @@
   ```
 
 ### 1.4 Development Tools
-- [ ] Setup ESLint
-  - [ ] Backend configuration
-  - [ ] Frontend configuration
-- [ ] Setup Prettier
-  - [ ] Create `.prettierrc`
-  - [ ] Add format scripts
+- [x] Setup ESLint
+  - [x] Backend configuration
+  - [x] Frontend configuration
+- [x] Setup Prettier
+  - [x] Create `.prettierrc`
+  - [x] Add format scripts
 - [ ] Setup Husky
   - [ ] `npx husky-init`
   - [ ] Add pre-commit hook (lint + format)
