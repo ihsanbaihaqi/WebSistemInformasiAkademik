@@ -50,7 +50,7 @@
   - [x] Configure paths and build output
 - [x] Setup Prisma
   - [x] `npx prisma init`
-  - [ ] Configure PostgreSQL connection
+  - [x] Configure PostgreSQL connection
 - [x] Create basic folder structure
   ```
   backend/
@@ -102,17 +102,17 @@
 - [x] Setup Prettier
   - [x] Create `.prettierrc`
   - [x] Add format scripts
-- [ ] Setup Husky
-  - [ ] `npx husky-init`
-  - [ ] Add pre-commit hook (lint + format)
+- [x] Setup Husky
+  - [x] `npx husky-init`
+  - [x] Add pre-commit hook (lint + format)
   - [ ] Add commit-msg hook (conventional commits)
-- [ ] Setup Docker
-  - [ ] Create `Dockerfile` for backend
-  - [ ] Create `Dockerfile` for frontend
-  - [ ] Create `docker-compose.yml`
-- [ ] Setup VS Code workspace
-  - [ ] Create `.vscode/settings.json`
-  - [ ] Create `.vscode/extensions.json`
+- [x] Setup Docker
+  - [x] Create `Dockerfile` for backend
+  - [x] Create `Dockerfile` for frontend
+  - [x] Create `docker-compose.yml`
+- [x] Setup VS Code workspace
+  - [x] Create `.vscode/settings.json`
+  - [x] Create `.vscode/extensions.json`
 
 **Estimated Time:** 2-3 days  
 **Priority:** 🔴 Critical
@@ -122,20 +122,20 @@
 ## 🔧 Phase 2: Backend Development
 
 ### 2.1 Database Schema & Migrations
-- [ ] Create Prisma schema models
-  - [ ] User model
-  - [ ] Mahasiswa model
-  - [ ] Dosen model
-  - [ ] Fakultas & ProgramStudi models
-  - [ ] MataKuliah model
-  - [ ] Kelas model
-  - [ ] KRS model
-  - [ ] Nilai model
-  - [ ] Pembayaran models
-  - [ ] Notification model
-  - [ ] AuditLog model
-- [ ] Create database migrations
-  - [ ] `npx prisma migrate dev --name init`
+- [x] Create Prisma schema models
+  - [x] User model
+  - [x] Mahasiswa model
+  - [x] Dosen model
+  - [x] Fakultas & ProgramStudi models
+  - [x] MataKuliah model
+  - [x] Kelas model
+  - [x] KRS model
+  - [x] Nilai model
+  - [x] Pembayaran models
+  - [x] Notification model
+  - [x] AuditLog model
+- [x] Create database migrations
+  - [x] `npx prisma migrate dev --name init`
 - [ ] Create database views
   - [ ] v_mahasiswa_detail
   - [ ] v_krs_detail
