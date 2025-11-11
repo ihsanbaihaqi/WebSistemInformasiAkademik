@@ -20,10 +20,10 @@
 ### 1.1 Repository & Environment Setup
 - [ ] Create GitHub repository
   - [ ] Initialize with README.md
-  - [ ] Add .gitignore (Node, TypeScript, env files)
+  - [x] Add .gitignore (Node, TypeScript, env files)
   - [ ] Create branch protection rules (main, develop)
   - [ ] Setup GitHub Projects board
-- [ ] Setup project structure
+- [x] Setup project structure
   ```
   portal-akademik/
   ├── backend/
@@ -31,27 +31,27 @@
   ├── docs/
   └── scripts/
   ```
-- [ ] Initialize Node.js projects
-  - [ ] Backend: `npm init -y`
-  - [ ] Frontend: `npm create vite@latest`
+- [x] Initialize Node.js projects
+  - [x] Backend: `npm init -y`
+  - [x] Frontend: `npm create vite@latest`
 - [ ] Setup environment files
   - [ ] Create `.env.example` for backend
   - [ ] Create `.env.example` for frontend
   - [ ] Document all environment variables
 
 ### 1.2 Backend Initial Setup
-- [ ] Install core dependencies
+- [x] Install core dependencies
   ```bash
   npm install express prisma @prisma/client
   npm install typescript @types/node @types/express ts-node-dev -D
   ```
-- [ ] Setup TypeScript configuration
-  - [ ] Create `tsconfig.json`
+- [x] Setup TypeScript configuration
+  - [x] Create `tsconfig.json`
   - [ ] Configure paths and build output
-- [ ] Setup Prisma
-  - [ ] `npx prisma init`
+- [x] Setup Prisma
+  - [x] `npx prisma init`
   - [ ] Configure PostgreSQL connection
-- [ ] Create basic folder structure
+- [x] Create basic folder structure
   ```
   backend/
   ├── src/
@@ -68,19 +68,19 @@
   ```
 
 ### 1.3 Frontend Initial Setup
-- [ ] Setup Vite + React + TypeScript
-- [ ] Install core dependencies
+- [x] Setup Vite + React + TypeScript
+- [x] Install core dependencies
   ```bash
   npm install react-router-dom @tanstack/react-query axios zustand
   npm install tailwindcss postcss autoprefixer -D
   ```
-- [ ] Setup Tailwind CSS
-  - [ ] `npx tailwindcss init -p`
-  - [ ] Configure tailwind.config.js
+- [x] Setup Tailwind CSS
+  - [x] `npx tailwindcss init -p`
+  - [x] Configure tailwind.config.js
 - [ ] Install shadcn/ui components
   - [ ] Setup shadcn/ui CLI
   - [ ] Install base components (Button, Card, Input, etc)
-- [ ] Create folder structure
+- [x] Create folder structure
   ```
   frontend/
   ├── src/
