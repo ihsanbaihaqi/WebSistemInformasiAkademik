@@ -1,0 +1,23 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "Running pre-commit hooks..."
+
+# Lint and format backend
+echo "Linting and formatting backend..."
+(cd backend && npm run lint && npm run format)
+if [ $? -ne 0 ]; then
+    echo "Backend linting or formatting failed. Aborting commit."
+    exit 1
+fi
+
+# Lint and format frontend
+echo "Linting and formatting frontend..."
+(cd frontend && npm run lint && npm run format)
+if [ $? -ne 0 ]; then
+    echo "Frontend linting or formatting failed. Aborting commit."
+    exit 1
+fi
+
+echo "Pre-commit hooks passed."
+exit 0
