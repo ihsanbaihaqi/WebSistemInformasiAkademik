@@ -9,6 +9,6 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    // Aturan khusus dapat ditambahkan di sini
+    // Aturan ESLint khusus dapat ditambahkan di sini.
   },
 };

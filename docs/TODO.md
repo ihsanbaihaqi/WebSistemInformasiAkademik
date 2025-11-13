@@ -37,7 +37,7 @@
 - [x] Setup environment files
   - [x] Create `.env.example` for backend
   - [x] Create `.env.example` for frontend
-- [x] Document all environment variables
+  - [ ] Document all environment variables
 
 ### 1.2 Backend Initial Setup
 - [x] Install core dependencies
@@ -47,7 +47,7 @@
   ```
 - [x] Setup TypeScript configuration
   - [x] Create `tsconfig.json`
-  - [x] Configure paths and build output
+  - [ ] Configure paths and build output
 - [x] Setup Prisma
   - [x] `npx prisma init`
   - [ ] Configure PostgreSQL connection
@@ -102,10 +102,10 @@
 - [x] Setup Prettier
   - [x] Create `.prettierrc`
   - [x] Add format scripts
-- [ ] Setup Husky
-  - [ ] `npx husky-init`
-  - [ ] Add pre-commit hook (lint + format)
-  - [ ] Add commit-msg hook (conventional commits)
+- [x] Setup Husky
+  - [x] `npx husky-init`
+  - [x] Add pre-commit hook (lint + format)
+  - [x] Add commit-msg hook (conventional commits)
 - [ ] Setup Docker
   - [ ] Create `Dockerfile` for backend
   - [ ] Create `Dockerfile` for frontend
