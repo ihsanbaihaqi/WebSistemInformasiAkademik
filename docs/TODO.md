@@ -37,7 +37,7 @@
 - [x] Setup environment files
   - [x] Create `.env.example` for backend
   - [x] Create `.env.example` for frontend
-  - [ ] Document all environment variables
+  - [x] Document all environment variables
 
 ### 1.2 Backend Initial Setup
 - [x] Install core dependencies
@@ -47,10 +47,10 @@
   ```
 - [x] Setup TypeScript configuration
   - [x] Create `tsconfig.json`
-  - [ ] Configure paths and build output
+  - [x] Configure paths and build output
 - [x] Setup Prisma
   - [x] `npx prisma init`
-  - [ ] Configure PostgreSQL connection
+  - [x] Configure PostgreSQL connection
 - [x] Create basic folder structure
   ```
   backend/
@@ -106,13 +106,13 @@
   - [x] `npx husky-init`
   - [x] Add pre-commit hook (lint + format)
   - [x] Add commit-msg hook (conventional commits)
-- [ ] Setup Docker
-  - [ ] Create `Dockerfile` for backend
-  - [ ] Create `Dockerfile` for frontend
-  - [ ] Create `docker-compose.yml`
-- [ ] Setup VS Code workspace
-  - [ ] Create `.vscode/settings.json`
-  - [ ] Create `.vscode/extensions.json`
+- [x] Setup Docker
+  - [x] Create `Dockerfile` for backend
+  - [x] Create `Dockerfile` for frontend
+  - [x] Create `docker-compose.yml`
+- [x] Setup VS Code workspace
+  - [x] Create `.vscode/settings.json`
+  - [x] Create `.vscode/extensions.json`
 
 **Estimated Time:** 2-3 days  
 **Priority:** 🔴 Critical
