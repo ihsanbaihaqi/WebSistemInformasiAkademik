@@ -134,8 +134,8 @@
   - [x] Pembayaran models
   - [x] Notification model
   - [x] AuditLog model
-- [ ] Create database migrations
-  - [ ] `npx prisma migrate dev --name init`
+- [x] Create database migrations
+  - [x] `npx prisma migrate dev --name init`
 - [ ] Create database views
   - [ ] v_mahasiswa_detail
   - [ ] v_krs_detail
