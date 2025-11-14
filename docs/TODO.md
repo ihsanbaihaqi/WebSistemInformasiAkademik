@@ -122,18 +122,18 @@
 ## 🔧 Phase 2: Backend Development
 
 ### 2.1 Database Schema & Migrations
-- [ ] Create Prisma schema models
-  - [ ] User model
-  - [ ] Mahasiswa model
-  - [ ] Dosen model
-  - [ ] Fakultas & ProgramStudi models
-  - [ ] MataKuliah model
-  - [ ] Kelas model
-  - [ ] KRS model
-  - [ ] Nilai model
-  - [ ] Pembayaran models
-  - [ ] Notification model
-  - [ ] AuditLog model
+- [x] Create Prisma schema models
+  - [x] User model
+  - [x] Mahasiswa model
+  - [x] Dosen model
+  - [x] Fakultas & ProgramStudi models
+  - [x] MataKuliah model
+  - [x] Kelas model
+  - [x] KRS model
+  - [x] Nilai model
+  - [x] Pembayaran models
+  - [x] Notification model
+  - [x] AuditLog model
 - [ ] Create database migrations
   - [ ] `npx prisma migrate dev --name init`
 - [ ] Create database views

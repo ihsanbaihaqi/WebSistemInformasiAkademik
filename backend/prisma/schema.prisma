@@ -1,15 +1,177 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
   output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id                Int          @id @default(autoincrement())
+  email             String       @unique
+  password          String
+  role              UserRole     @default(MAHASISWA)
+  mahasiswa         Mahasiswa?
+  dosen             Dosen?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+  notifications     Notification[]
+  auditLogs         AuditLog[]
+}
+
+enum UserRole {
+  ADMIN
+  DOSEN
+  MAHASISWA
+}
+
+model Mahasiswa {
+  id                Int          @id @default(autoincrement())
+  user              User         @relation(fields: [userId], references: [id])
+  userId            Int          @unique
+  nim               String       @unique
+  nama              String
+  angkatan          Int
+  programStudi      ProgramStudi @relation(fields: [programStudiId], references: [id])
+  programStudiId    Int
+  dosenWali         Dosen        @relation("DosenWali", fields: [dosenWaliId], references: [id])
+  dosenWaliId       Int
+  krs               KRS[]
+  pembayaran        Pembayaran[]
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model Dosen {
+  id                Int          @id @default(autoincrement())
+  user              User         @relation(fields: [userId], references: [id])
+  userId            Int          @unique
+  nidn              String       @unique
+  nama              String
+  programStudi      ProgramStudi @relation(fields: [programStudiId], references: [id])
+  programStudiId    Int
+  mahasiswaWali     Mahasiswa[]  @relation("DosenWali")
+  kelas             Kelas[]
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model Fakultas {
+  id                Int          @id @default(autoincrement())
+  nama              String       @unique
+  programStudi      ProgramStudi[]
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model ProgramStudi {
+  id                Int          @id @default(autoincrement())
+  nama              String       @unique
+  fakultas          Fakultas     @relation(fields: [fakultasId], references: [id])
+  fakultasId        Int
+  mahasiswa         Mahasiswa[]
+  dosen             Dosen[]
+  mataKuliah        MataKuliah[]
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model MataKuliah {
+  id                Int          @id @default(autoincrement())
+  kode              String       @unique
+  nama              String
+  sks               Int
+  programStudi      ProgramStudi @relation(fields: [programStudiId], references: [id])
+  programStudiId    Int
+  kelas             Kelas[]
+  prasyarat         MataKuliah[] @relation("Prasyarat")
+  prasyaratUntuk    MataKuliah[] @relation("Prasyarat")
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model Kelas {
+  id                Int          @id @default(autoincrement())
+  mataKuliah        MataKuliah   @relation(fields: [mataKuliahId], references: [id])
+  mataKuliahId      Int
+  dosen             Dosen        @relation(fields: [dosenId], references: [id])
+  dosenId           Int
+  nama              String
+  ruangan           String
+  jadwal            String
+  kapasitas         Int
+  terisi            Int          @default(0)
+  krs               KRS[]
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model KRS {
+  id                Int          @id @default(autoincrement())
+  mahasiswa         Mahasiswa    @relation(fields: [mahasiswaId], references: [id])
+  mahasiswaId       Int
+  kelas             Kelas        @relation(fields: [kelasId], references: [id])
+  kelasId           Int
+  status            KRSStatus    @default(DRAFT)
+  nilai             Nilai?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+enum KRSStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  REJECTED
+}
+
+model Nilai {
+  id                Int          @id @default(autoincrement())
+  krs               KRS          @relation(fields: [krsId], references: [id])
+  krsId             Int          @unique
+  nilaiAngka        Float
+  nilaiHuruf        String
+  bobot             Float
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+model Pembayaran {
+  id                Int          @id @default(autoincrement())
+  mahasiswa         Mahasiswa    @relation(fields: [mahasiswaId], references: [id])
+  mahasiswaId       Int
+  jumlah            Float
+  tanggalBayar      DateTime
+  status            PembayaranStatus @default(PENDING)
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+}
+
+enum PembayaranStatus {
+  PENDING
+  LUNAS
+  OVERDUE
+}
+
+model Notification {
+  id                Int          @id @default(autoincrement())
+  user              User         @relation(fields: [userId], references: [id])
+  userId            Int
+  pesan             String
+  dibaca            Boolean      @default(false)
+  createdAt         DateTime     @default(now())
+}
+
+model AuditLog {
+  id                Int          @id @default(autoincrement())
+  user              User         @relation(fields: [userId], references: [id])
+  userId            Int
+  aksi              String
+  data              Json
+  createdAt         DateTime     @default(now())
 }
