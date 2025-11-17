@@ -136,19 +136,19 @@
   - [x] AuditLog model
 - [x] Create database migrations
   - [x] `npx prisma migrate dev --name init`
-- [ ] Create database views
-  - [ ] v_mahasiswa_detail
-  - [ ] v_krs_detail
-  - [ ] v_nilai_khs
-- [ ] Create database triggers
-  - [ ] Auto update timestamps
-  - [ ] Auto increment/decrement kelas.terisi
+- [x] Create database views
+  - [x] v_mahasiswa_detail
+  - [x] v_krs_detail
+  - [x] v_nilai_khs
+- [x] Create database triggers
+  - [x] Auto update timestamps
+  - [x] Auto increment/decrement kelas.terisi
   - [ ] Auto calculate IPK
   - [ ] Audit logging
-- [ ] Create seed data
-  - [ ] Sample users (admin, dosen, mahasiswa)
-  - [ ] Fakultas & Program Studi
-  - [ ] Mata Kuliah
+- [x] Create seed data
+  - [x] Sample users (admin, dosen, mahasiswa)
+  - [x] Fakultas & Program Studi
+  - [x] Mata Kuliah
   - [ ] Periode Akademik
   - [ ] Jenis Pembayaran
 
