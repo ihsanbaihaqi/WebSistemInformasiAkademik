@@ -53,8 +53,8 @@ SELECT
     mk.kode AS "kodeMataKuliah",
     mk.nama AS "namaMataKuliah",
     mk.sks,
-    n.nilaiAngka,
-    n.nilaiHuruf,
+    n."nilaiAngka",
+    n."nilaiHuruf",
     n.bobot
 FROM "Nilai" n
 LEFT JOIN "KRS" krs ON n."krsId" = krs.id
